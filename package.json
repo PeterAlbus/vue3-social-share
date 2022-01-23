@@ -1,0 +1,55 @@
+{
+  "name": "vue3-social-share",
+  "version": "0.1.0",
+  "private": false,
+  "description": "vue3的快捷分享组件",
+  "main": "dist/index.main.js",
+  "module": "lib/index.esm.js",
+  "typings": "lib/index.d.ts",
+  "author": {
+    "name": "peteralbus",
+    "email": "wuhongdb@163.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "pnpm build:clean && pnpm build:lib && pnpm build:esm-bundle && rimraf lib/demo.html",
+    "build:clean": "rimraf lib",
+    "build:lib": "vue-cli-service build --target lib --name index --dest lib packages/index.ts",
+    "build:esm-bundle": "rollup --config ./build/rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterAlbus/vue3-social-share"
+  },
+  "bugs": {
+    "url": "https://github.com/PeterAlbus/vue3-social-share/issues"
+  },
+  "homepage": "https://github.com/PeterAlbus/vue3-social-share",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "typescript",
+    "share"
+  ],
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "qrcodejs2": "^0.0.2",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "rollup": "^2.58.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "typescript": "~4.1.5"
+  }
+}
