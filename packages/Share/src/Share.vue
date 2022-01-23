@@ -62,7 +62,7 @@ export default defineComponent({
     }
 
     const shareQZone = () => {
-      window.open("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="+props.url+"&title="+props.title+"&desc"+props.description+"&summary="+props.description+"&site="+props.source)
+      window.open("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="+props.url+"&title="+props.title+"&desc"+props.description+"&summary="+props.description+"&site="+props.source+"&pics="+props.image)
     }
 
     const shareLinkedin = () => {

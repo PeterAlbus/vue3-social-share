@@ -1,6 +1,6 @@
 {
   "name": "vue3-social-share",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "private": false,
   "description": "vue3的快捷分享组件",
   "main": "dist/index.main.js",
@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/PeterAlbus/vue3-social-share/issues"
   },
-  "homepage": "https://github.com/PeterAlbus/vue3-social-share",
+  "homepage": "https://www.peteralbus.com",
   "keywords": [
     "vue",
     "vuejs",
