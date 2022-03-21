@@ -64,6 +64,7 @@ declare const _default: import("vue").DefineComponent<{
         default: string;
     };
 }, {
+    url: import("vue").Ref<string>;
     shareWeibo: () => void;
     shareQQ: () => void;
     shareWeChat: () => void;

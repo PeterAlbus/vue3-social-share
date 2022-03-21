@@ -1,6 +1,6 @@
 {
   "name": "vue3-social-share",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "description": "vue3的快捷分享组件",
   "main": "dist/index.main.js",
@@ -34,7 +34,7 @@
   ],
   "dependencies": {
     "core-js": "^3.6.5",
-    "qrcodejs2": "^0.0.2",
+    "qrcode.vue": "^3.3.3",
     "vue": "^3.0.0"
   },
   "devDependencies": {

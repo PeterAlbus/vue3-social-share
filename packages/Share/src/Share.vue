@@ -5,7 +5,7 @@
     <a class="social-share-icon icon-wechat" v-if="weChat" style='cursor: pointer' v-on:mouseover="shareWeChat">
             <div class="wechat-qrcode">
               <h4>二维码</h4>
-              <div class="qrcode" ref="qrcode"></div>
+              <qrcode-vue :value="url" :size="120" level="H" style="margin: 5px"/>
               <div class="help">扫描二维码，点击右上角分享</div>
             </div>
     </a>
@@ -23,7 +23,7 @@
 
 <script lang="ts">
 import { defineComponent,ref } from 'vue'
-import QRCode from 'qrcodejs2'
+import QrcodeVue from 'qrcode.vue'
 export default defineComponent({
   props:{
     QQ: {type:Boolean, default:true},
@@ -42,6 +42,9 @@ export default defineComponent({
     title: {type:String, default:document.title},
     description: {type:String, default:''},
     image: {type:String,default:''}
+  },
+  components: {
+    QrcodeVue
   },
   name: "Share",
   setup(props){
@@ -86,23 +89,13 @@ export default defineComponent({
     }
 
     const qrcode=ref()
+    const url=ref('')
     let weChatQR: any = null
     const QrCode =() =>{
-      if(weChatQR)
-      {
-        weChatQR.clear()
-        weChatQR.makeCode(props.url)
-      }
-      else
-      {
-        weChatQR = new QRCode(document.getElementsByClassName('qrcode')[0],{
-          width: 100, // 设置宽度，单位像素
-          height: 100, // 设置高度，单位像素
-          text: props.url // 设置二维码内容或跳转地址
-        })
-      }
+      url.value=props.url
     }
     return {
+      url,
       shareWeibo,
       shareQQ,
       shareWeChat,

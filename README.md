@@ -11,6 +11,7 @@
 MIT License
 
 网页二维码的生成使用'qrcodejs2'([qrcodejs2 - npm (npmjs.com)](https://www.npmjs.com/package/qrcodejs2))
+在0.1.4后修改为了'qrcode.vue'，对vite也拥有了支持
 
 分享栏的图标参考share.js——[overtrue/share.js (github.com)](https://github.com/overtrue/share.js)
 
