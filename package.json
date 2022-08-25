@@ -1,6 +1,6 @@
 {
   "name": "vue3-social-share",
-  "version": "0.1.4",
+  "version": "0.1.7",
   "private": false,
   "description": "vue3的快捷分享组件",
   "main": "dist/index.main.js",

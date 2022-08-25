@@ -49,11 +49,11 @@ export default defineComponent({
   name: "Share",
   setup(props){
     const shareWeibo = () => {
-      window.open("http://service.weibo.com/share/share.php?url="+props.url+"&title="+props.title+"&pic="+props.image+"&appkey=")
+      window.open("http://service.weibo.com/share/share.php?url="+encodeURIComponent(props.url)+"&title="+encodeURIComponent(props.title)+"&pic="+encodeURIComponent(props.image)+"&appkey=")
     }
 
     const shareQQ = () => {
-      window.open("http://connect.qq.com/widget/shareqq/index.html?url="+props.url+"&title="+props.title+"&source="+props.source+"&desc="+props.description+"&pics="+props.image)
+      window.open("http://connect.qq.com/widget/shareqq/index.html?url="+encodeURIComponent(props.url)+"&title="+encodeURIComponent(props.title)+"&source="+encodeURIComponent(props.source)+"&desc="+encodeURIComponent(props.description)+"&pics="+encodeURIComponent(props.image))
     }
 
     const shareWeChat = () => {
@@ -61,31 +61,31 @@ export default defineComponent({
     }
 
     const shareDouban = () => {
-      window.open("http://shuo.douban.com/!service/share?href="+props.url+"&name="+props.title+"&text="+props.description+"&image="+props.image+"&starid=0&aid=0&style=11")
+      window.open("http://shuo.douban.com/!service/share?href="+encodeURIComponent(props.url)+"&name="+encodeURIComponent(props.title)+"&text="+encodeURIComponent(props.description)+"&image="+encodeURIComponent(props.image)+"&starid=0&aid=0&style=11")
     }
 
     const shareQZone = () => {
-      window.open("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="+props.url+"&title="+props.title+"&desc"+props.description+"&summary="+props.description+"&site="+props.source+"&pics="+props.image)
+      window.open("http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="+encodeURIComponent(props.url)+"&title="+encodeURIComponent(props.title)+"&desc"+encodeURIComponent(props.description)+"&summary="+encodeURIComponent(props.description)+"&site="+encodeURIComponent(props.source)+"&pics="+encodeURIComponent(props.image))
     }
 
     const shareLinkedin = () => {
-      window.open("http://www.linkedin.com/shareArticle?mini=true&amp;ro=true&amp;title="+props.title+"&url="+props.url+"&summary="+props.description+"&source="+props.source+"&armin=armin")
+      window.open("http://www.linkedin.com/shareArticle?mini=true&amp;ro=true&amp;title="+encodeURIComponent(props.title)+"&url="+encodeURIComponent(props.url)+"&summary="+encodeURIComponent(props.description)+"&source="+encodeURIComponent(props.source)+"&armin=armin")
     }
 
     const shareDianDian = () => {
-      window.open("http://www.diandian.com/share?lo="+props.url+"&ti="+props.title+"&type=link")
+      window.open("http://www.diandian.com/share?lo="+encodeURIComponent(props.url)+"&ti="+encodeURIComponent(props.title)+"&type=link")
     }
 
     const shareFacebook = () => {
-      window.open("https://www.facebook.com/sharer/sharer.php?u="+props.url)
+      window.open("https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(props.url))
     }
 
     const shareTwitter = () => {
-      window.open("https://twitter.com/intent/tweet?text="+props.description+"&url="+props.url+"&via="+props.origin)
+      window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent(props.description)+"&url="+encodeURIComponent(props.url)+"&via="+encodeURIComponent(props.origin))
     }
 
     const shareGoogle = () => {
-      window.open("https://plus.google.com/share?url="+props.url)
+      window.open("https://plus.google.com/share?url="+encodeURIComponent(props.url))
     }
 
     const qrcode=ref()
